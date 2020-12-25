@@ -50,6 +50,8 @@ choice
 	default MTK_SECOND_IF_NONE if PACKAGE_kmod-mt7603e
 	default MTK_SECOND_IF_NONE if TARGET_ramips_mt7621_DEVICE_jcg_y2
 	default MTK_SECOND_IF_NONE if TARGET_ramips_mt7621_DEVICE_phicomm_k2p
+	default MTK_SECOND_IF_NONE if TARGET_ramips_mt7621_DEVICE_dlik_dir-853-a3
+	default MTK_SECOND_IF_NONE if TARGET_ramips_mt7621_DEVICE_dlik_dir-853-r1
 	default MTK_SECOND_IF_MT7615E
 
 config MTK_SECOND_IF_NONE
@@ -276,6 +278,8 @@ config MTK_DBDC_MODE
 	select MTK_MULTI_PROFILE_SUPPORT
 	default y if TARGET_ramips_mt7621_DEVICE_jcg_y2
 	default y if TARGET_ramips_mt7621_DEVICE_phicomm_k2p || TARGET_DEVICE_ramips_mt7621_DEVICE_phicomm_k2p
+	default y if TARGET_ramips_mt7621_DEVICE_dlink_dir-853-a3 || TARGET_DEVICE_ramips_mt7621_DEVICE_dlink_dir-853-a3
+	default y if TARGET_ramips_mt7621_DEVICE_dlink_dir-853-r1 || TARGET_DEVICE_ramips_mt7621_DEVICE_dlink_dir-853-r1
 	default n
 
 config MTK_MULTI_PROFILE_SUPPORT
@@ -289,6 +293,8 @@ config MTK_DEFAULT_5G_PROFILE
 	depends on !PACKAGE_kmod-mt7615d_dbdc
 	default y if TARGET_ramips_mt7621_DEVICE_jcg_y2
 	default y if TARGET_ramips_mt7621_DEVICE_phicomm_k2p || TARGET_DEVICE_ramips_mt7621_DEVICE_phicomm_k2p
+	default y if TARGET_ramips_mt7621_DEVICE_dlink_dir-853-a3 || TARGET_DEVICE_ramips_mt7621_DEVICE_dlink_dir-853-a3
+	default y if TARGET_ramips_mt7621_DEVICE_dlink_dir-853-r1 || TARGET_DEVICE_ramips_mt7621_DEVICE_dlink_dir-853-r1
 	default n
 
 config MTK_WSC_INCLUDED
